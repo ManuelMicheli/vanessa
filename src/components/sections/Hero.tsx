@@ -141,7 +141,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-4 sm:px-6">
+      <div className="container-custom relative z-10 pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div className="hero-badge inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-xs sm:text-sm mb-6 sm:mb-8 border border-white/30 shadow-lg">

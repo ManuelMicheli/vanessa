@@ -81,7 +81,7 @@ export default function AboutPreview() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white overflow-hidden">
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <motion.div

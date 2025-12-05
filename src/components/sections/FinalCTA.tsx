@@ -20,7 +20,7 @@ export default function FinalCTA() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Content Side */}
           <motion.div

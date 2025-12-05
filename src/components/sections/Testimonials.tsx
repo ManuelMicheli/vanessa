@@ -71,7 +71,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#F7F3F1] overflow-hidden">
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           ref={ref}

@@ -106,15 +106,75 @@ export default function TestimonianzePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+        {/* Base gradient - deep navy to almost black */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A192A] via-[#0D1F35] to-[#050A10]" />
+        
+        {/* Animated grid network pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
+        
+        {/* Diagonal lines texture */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 100px,
+              rgba(255,255,255,0.03) 100px,
+              rgba(255,255,255,0.03) 101px
+            )`,
+          }}
+        />
+        
+        {/* Soft fog/mist layers */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#d97706]/10 rounded-full blur-3xl" />
+          {/* Top-right subtle glow */}
+          <div className="absolute -top-1/3 -right-1/4 w-[600px] h-[600px] bg-[#1a365d]/20 rounded-full blur-[120px]" />
+          {/* Bottom-left ambient glow */}
+          <div className="absolute -bottom-1/3 -left-1/4 w-[500px] h-[500px] bg-[#0f172a]/40 rounded-full blur-[100px]" />
+          {/* Center accent glow - very subtle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#d97706]/[0.03] rounded-full blur-[150px]" />
         </div>
-        <div className="container-custom relative z-10 px-4 sm:px-6">
+        
+        {/* Noise texture overlay for depth */}
+        <div 
+          className="absolute inset-0 opacity-[0.4]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            mixBlendMode: 'overlay',
+          }}
+        />
+        
+        {/* Dark overlay for contrast guarantee */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A192A]/60 via-transparent to-[#050A10]/70" />
+        
+        {/* Vignette effect */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, transparent 0%, rgba(5,10,16,0.4) 100%)',
+          }}
+        />
+        <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/[0.08] backdrop-blur-sm text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-white/[0.08]"
+            >
               Testimonianze
-            </span>
+            </motion.span>
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
@@ -202,7 +262,7 @@ export default function TestimonianzePage() {
 
       {/* Testimonials Grid */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom px-4 sm:px-6">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             {testimonials.map((testimonial) => (
               <div

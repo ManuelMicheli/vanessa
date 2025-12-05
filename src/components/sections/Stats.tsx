@@ -72,7 +72,7 @@ export default function Stats() {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#F7F3F1]/50 to-white" />
       
-      <div className="container-custom relative px-4 sm:px-6">
+      <div className="container-custom relative px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}

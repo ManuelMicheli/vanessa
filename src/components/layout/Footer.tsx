@@ -90,7 +90,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#001F3F] text-white">
       {/* Main Footer */}
-      <div className="container-custom py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+      <div className="container-custom py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
           {/* Brand Column */}
           <motion.div
@@ -236,7 +236,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container-custom py-4 sm:py-6 px-4 sm:px-6">
+        <div className="container-custom py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <p className="text-white/50 text-xs sm:text-sm text-center sm:text-left">
               © {COPYRIGHT.year} {COPYRIGHT.text}

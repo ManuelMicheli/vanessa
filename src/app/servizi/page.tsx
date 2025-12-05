@@ -115,7 +115,7 @@ export default function ServiziPage() {
         />
         
         {/* Content */}
-        <div className="container-custom relative z-10 px-4 sm:px-6">
+        <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
@@ -200,7 +200,7 @@ export default function ServiziPage() {
 
       {/* Benefits Bar */}
       <section className="bg-white border-b border-gray-100">
-        <div className="container-custom py-6 sm:py-8 px-4 sm:px-6">
+        <div className="container-custom py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
@@ -219,7 +219,7 @@ export default function ServiziPage() {
 
       {/* Services Grid */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[var(--color-bg-alt)]">
-        <div className="container-custom px-4 sm:px-6">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -261,7 +261,7 @@ export default function ServiziPage() {
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#1a2332]">
-        <div className="container-custom px-4 sm:px-6">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2"

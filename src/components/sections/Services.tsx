@@ -110,7 +110,7 @@ export default function Services() {
 
   return (
     <section id="servizi" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[var(--color-bg-alt)]">
-      <div className="container-custom px-4 sm:px-6">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           ref={ref}
