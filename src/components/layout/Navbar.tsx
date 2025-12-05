@@ -92,12 +92,12 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <nav className="container-custom">
-          <div className="flex items-center justify-between h-20">
+        <nav className="container-custom px-4 sm:px-6">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <div
-                className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-lg transition-colors ${
+                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center font-bold text-base sm:text-lg transition-colors ${
                   isScrolled
                     ? "bg-[#001F3F] text-white"
                     : "bg-white text-[#001F3F]"
@@ -107,7 +107,7 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <span
-                  className={`font-semibold text-lg transition-colors ${
+                  className={`font-semibold text-base sm:text-lg transition-colors ${
                     isScrolled ? "text-[#001F3F]" : "text-white"
                   }`}
                   style={{ fontFamily: "var(--font-playfair)" }}
@@ -188,10 +188,10 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors ${
+              className={`lg:hidden p-2.5 sm:p-2 rounded-lg transition-colors touch-manipulation ${
                 isScrolled
-                  ? "text-[#001F3F] hover:bg-[#F7F3F1]"
-                  : "text-white hover:bg-white/10"
+                  ? "text-[#001F3F] hover:bg-[#F7F3F1] active:bg-[#F7F3F1]"
+                  : "text-white hover:bg-white/10 active:bg-white/20"
               }`}
               aria-label="Toggle menu"
             >
@@ -220,7 +220,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="h-full pt-24 pb-8 px-6 overflow-y-auto"
+              className="h-full pt-20 sm:pt-24 pb-8 px-4 sm:px-6 overflow-y-auto"
             >
               <div className="flex flex-col gap-2">
                 {navigation.map((item, index) => (
@@ -233,19 +233,19 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-3 text-xl font-medium text-white hover:text-[#D4AF37] transition-colors"
+                      className="block py-3 sm:py-4 text-lg sm:text-xl font-medium text-white hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors touch-manipulation"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {item.name}
                     </Link>
                     {item.children && (
-                      <div className="pl-4 mt-2 space-y-2 border-l-2 border-white/20">
+                      <div className="pl-4 sm:pl-6 mt-2 space-y-2 border-l-2 border-white/20">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block py-2 text-white/70 hover:text-[#D4AF37] transition-colors"
+                            className="block py-2 sm:py-2.5 text-base sm:text-lg text-white/70 hover:text-[#D4AF37] active:text-[#D4AF37] transition-colors touch-manipulation"
                           >
                             {child.name}
                           </Link>
@@ -265,7 +265,7 @@ export default function Navbar() {
               >
                 <a
                   href={`tel:${CONTACT_INFO.phone}`}
-                  className="flex items-center justify-center gap-3 w-full py-4 bg-[#D4AF37] text-[#001F3F] rounded-xl font-semibold text-lg hover:bg-[#B8962E] transition-colors"
+                  className="flex items-center justify-center gap-3 w-full py-4 sm:py-5 bg-[#D4AF37] text-[#001F3F] rounded-xl font-semibold text-base sm:text-lg hover:bg-[#B8962E] active:bg-[#B8962E] transition-colors touch-manipulation"
                 >
                   <Phone className="w-5 h-5" />
                   <span>{CONTACT_INFO.displayPhone}</span>
@@ -273,7 +273,7 @@ export default function Navbar() {
                 <Link
                   href={CONTACT_INFO.mobileCtaLink}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center w-full py-4 mt-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-[#001F3F] transition-colors"
+                  className="flex items-center justify-center w-full py-4 sm:py-5 mt-4 border-2 border-white text-white rounded-xl font-semibold text-base sm:text-lg hover:bg-white hover:text-[#001F3F] active:bg-white active:text-[#001F3F] transition-colors touch-manipulation"
                 >
                   {CONTACT_INFO.mobileCtaText}
                 </Link>

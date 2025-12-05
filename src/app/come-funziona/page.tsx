@@ -92,17 +92,17 @@ export default function ComeFunzionaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#10b981]/10 rounded-full blur-3xl" />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white/90 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               Come Funziona
             </span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["Zero", "Anticipo.", "Massimo", "Risultato."].map((word, wordIndex) => (
@@ -187,8 +187,8 @@ export default function ComeFunzionaPage() {
       </section>
 
       {/* Process Steps */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-1.5 bg-[#2563eb]/10 text-[#2563eb] rounded-full text-sm font-medium mb-4">
               Il Processo
@@ -204,31 +204,31 @@ export default function ComeFunzionaPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all"
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-[#2563eb] text-white flex items-center justify-center font-bold text-xl">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#2563eb] text-white flex items-center justify-center font-bold text-lg sm:text-xl flex-shrink-0">
                     {step.number}
                   </div>
-                  <div className="w-12 h-12 rounded-xl bg-[#2563eb]/10 flex items-center justify-center">
-                    <step.icon className="w-6 h-6 text-[#2563eb]" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#2563eb]/10 flex items-center justify-center flex-shrink-0">
+                    <step.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#2563eb]" />
                   </div>
                 </div>
                 <h3
-                  className="text-xl font-bold text-[#1a2332] mb-3"
+                  className="text-lg sm:text-xl font-bold text-[#1a2332] mb-2 sm:mb-3"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {step.title}
                 </h3>
-                <p className="text-[#374151] mb-4">{step.description}</p>
-                <ul className="space-y-2">
+                <p className="text-sm sm:text-base text-[#374151] mb-3 sm:mb-4">{step.description}</p>
+                <ul className="space-y-1.5 sm:space-y-2">
                   {step.details.map((detail, index) => (
-                    <li key={index} className="flex items-center gap-2 text-sm text-[#374151]">
-                      <CheckCircle className="w-4 h-4 text-[#10b981]" />
+                    <li key={index} className="flex items-center gap-2 text-xs sm:text-sm text-[#374151]">
+                      <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#10b981] flex-shrink-0" />
                       {detail}
                     </li>
                   ))}
@@ -240,8 +240,8 @@ export default function ComeFunzionaPage() {
       </section>
 
       {/* Zero Anticipo Explained */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white">
+        <div className="container-custom px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <span className="inline-block px-4 py-1.5 bg-[#10b981]/10 text-[#10b981] rounded-full text-sm font-medium mb-4">
@@ -302,8 +302,8 @@ export default function ComeFunzionaPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-1.5 bg-[#d97706]/10 text-[#d97706] rounded-full text-sm font-medium mb-4">
               Domande Frequenti

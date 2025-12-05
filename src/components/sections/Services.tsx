@@ -109,8 +109,8 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section id="servizi" className="py-20 lg:py-32 bg-[var(--color-bg-alt)]">
-      <div className="container-custom">
+    <section id="servizi" className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[var(--color-bg-alt)]">
+      <div className="container-custom px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           ref={ref}
@@ -135,7 +135,7 @@ export default function Services() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -144,27 +144,27 @@ export default function Services() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
               <Link href={service.href} className="group block h-full">
-                <div className="h-full bg-white rounded-2xl p-8 lg:p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--color-border)] hover:border-[var(--color-accent)]/20">
+                <div className="h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--color-border)] hover:border-[var(--color-accent)]/20">
                   {/* Icon */}
-                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 bg-[var(--color-accent-light)] group-hover:bg-[var(--color-accent-medium)]">
-                    <service.icon className="w-10 h-10 text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 transition-all duration-300 group-hover:scale-110 bg-[var(--color-accent-light)] group-hover:bg-[var(--color-accent-medium)]">
+                    <service.icon className="w-8 h-8 sm:w-10 sm:h-10 text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300" />
                   </div>
 
                   {/* Content */}
                   <h3
-                    className="text-2xl font-bold text-[var(--color-primary)] mb-4 group-hover:text-[var(--color-accent)] transition-colors duration-300 leading-tight"
+                    className="text-xl sm:text-2xl font-bold text-[var(--color-primary)] mb-3 sm:mb-4 group-hover:text-[var(--color-accent)] transition-colors duration-300 leading-tight"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {service.title}
                   </h3>
-                  <p className="text-[var(--color-text-muted)] mb-8 leading-relaxed text-base">
+                  <p className="text-[var(--color-text-muted)] mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                     {service.description}
                   </p>
 
                   {/* Link */}
-                  <div className="flex items-center gap-2 text-[var(--color-accent)] font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                  <div className="flex items-center gap-2 text-[var(--color-accent)] font-semibold text-xs sm:text-sm group-hover:gap-3 transition-all duration-300">
                     <span>Scopri di più</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
               </Link>

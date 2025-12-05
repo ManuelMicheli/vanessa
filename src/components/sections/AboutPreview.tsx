@@ -80,9 +80,9 @@ export default function AboutPreview() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="py-20 lg:py-32 bg-white overflow-hidden">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white overflow-hidden">
+      <div className="container-custom px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <motion.div
             ref={ref}
@@ -94,21 +94,21 @@ export default function AboutPreview() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-[#001F3F] to-[#002B57]">
               {/* Placeholder for professional photo */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                    <span className="text-5xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
+                <div className="text-center text-white p-4 sm:p-8">
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                    <span className="text-4xl sm:text-5xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
                       {SECTION_CONTENT.imagePlaceholder.initials}
                     </span>
                   </div>
-                  <p className="text-white/70 text-sm">
+                  <p className="text-white/70 text-xs sm:text-sm">
                     {SECTION_CONTENT.imagePlaceholder.text}
                   </p>
                 </div>
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#D4AF37]/20 rounded-2xl" />
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#D4AF37]/10 rounded-2xl" />
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-32 h-32 sm:w-48 sm:h-48 bg-[#D4AF37]/20 rounded-2xl" />
+              <div className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-24 h-24 sm:w-32 sm:h-32 bg-[#D4AF37]/10 rounded-2xl" />
             </div>
 
             {/* Floating Badge */}
@@ -116,15 +116,15 @@ export default function AboutPreview() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -bottom-4 -right-4 lg:bottom-8 lg:right-[-2rem] bg-white rounded-xl p-4 shadow-xl border border-[#E5E7EB]"
+              className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 lg:bottom-8 lg:right-[-2rem] bg-white rounded-xl p-3 sm:p-4 shadow-xl border border-[#E5E7EB]"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-[#D4AF37]" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]" />
                 </div>
                 <div>
-                  <div className="font-bold text-[#001F3F]">{SECTION_CONTENT.badgeInfo.years}</div>
-                  <div className="text-sm text-[#666666]">{SECTION_CONTENT.badgeInfo.label}</div>
+                  <div className="font-bold text-sm sm:text-base text-[#001F3F]">{SECTION_CONTENT.badgeInfo.years}</div>
+                  <div className="text-xs sm:text-sm text-[#666666]">{SECTION_CONTENT.badgeInfo.label}</div>
                 </div>
               </div>
             </motion.div>
@@ -136,40 +136,40 @@ export default function AboutPreview() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="inline-block px-4 py-1.5 bg-[#001F3F]/10 text-[#001F3F] rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-[#001F3F]/10 text-[#001F3F] rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4">
               {SECTION_CONTENT.badge}
             </span>
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#001F3F] mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#001F3F] mb-4 sm:mb-6"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               {SECTION_CONTENT.title.main}{" "}
               <span className="text-[#D4AF37]">{SECTION_CONTENT.title.accent}</span>
             </h2>
-            <p className="text-lg text-[#666666] mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#666666] mb-6 sm:mb-8 leading-relaxed">
               {SECTION_CONTENT.description.paragraph1}
             </p>
-            <p className="text-lg text-[#666666] mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#666666] mb-6 sm:mb-8 leading-relaxed">
               {SECTION_CONTENT.description.paragraph2Start}{" "}
               <strong className="text-[#001F3F]">{SECTION_CONTENT.description.paragraph2Strong}</strong>.{" "}
               {SECTION_CONTENT.description.paragraph2End}
             </p>
 
             {/* Values */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
               {values.map((value, index) => (
                 <motion.div
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-2 sm:gap-3"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#F7F3F1] flex items-center justify-center flex-shrink-0">
-                    <value.icon className="w-5 h-5 text-[#001F3F]" />
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#F7F3F1] flex items-center justify-center flex-shrink-0">
+                    <value.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#001F3F]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-[#001F3F] text-sm">
+                    <div className="font-semibold text-[#001F3F] text-xs sm:text-sm">
                       {value.title}
                     </div>
                     <div className="text-xs text-[#666666]">
@@ -182,10 +182,10 @@ export default function AboutPreview() {
 
             <Link
               href={SECTION_CONTENT.cta.href}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#001F3F] text-white font-semibold rounded-xl hover:bg-[#00152A] transition-colors group"
+              className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#001F3F] text-white font-semibold rounded-xl hover:bg-[#00152A] active:bg-[#00152A] transition-colors group text-sm sm:text-base touch-manipulation"
             >
               <span>{SECTION_CONTENT.cta.text}</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>

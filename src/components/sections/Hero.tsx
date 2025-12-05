@@ -141,17 +141,17 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 pt-20 pb-12">
+      <div className="container-custom relative z-10 pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <motion.div className="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-sm mb-8 border border-white/30 shadow-lg">
-            <HERO_CONTENT.badge.icon className="w-4 h-4 text-[#D4AF37]" />
+          <motion.div className="hero-badge inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-xs sm:text-sm mb-6 sm:mb-8 border border-white/30 shadow-lg">
+            <HERO_CONTENT.badge.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4AF37]" />
             <span>{HERO_CONTENT.badge.text}</span>
           </motion.div>
 
           {/* Main Heading */}
           <h1
-            className="hero-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-2xl"
+            className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6 drop-shadow-2xl px-2"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             {HERO_CONTENT.title.main}
@@ -160,7 +160,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="hero-subtitle text-lg md:text-xl text-white max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-lg">
+          <p className="hero-subtitle text-base sm:text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed drop-shadow-lg px-4">
             <strong className="text-white">{HERO_CONTENT.subtitle.strong}</strong>
             <br />
             {HERO_CONTENT.subtitle.text}{" "}
@@ -168,29 +168,29 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-4">
             <Link
               href={HERO_CONTENT.cta.primary.href}
-              className="hero-cta group flex items-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#001F3F] font-semibold rounded-xl shadow-lg shadow-[#D4AF37]/30 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all hover:-translate-y-1 hover:bg-[#B8962E]"
+              className="hero-cta group flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D4AF37] text-[#001F3F] font-semibold rounded-xl shadow-lg shadow-[#D4AF37]/30 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all hover:-translate-y-1 hover:bg-[#B8962E] active:bg-[#B8962E] text-sm sm:text-base w-full sm:w-auto touch-manipulation"
             >
               <span>{HERO_CONTENT.cta.primary.text}</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href={`tel:${HERO_CONTENT.cta.secondary.phone}`}
-              className="hero-cta flex items-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border-2 border-white/40 hover:bg-white/30 hover:border-white/60 transition-all shadow-lg"
+              className="hero-cta flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border-2 border-white/40 hover:bg-white/30 hover:border-white/60 active:bg-white/30 transition-all shadow-lg text-sm sm:text-base w-full sm:w-auto touch-manipulation"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>{HERO_CONTENT.cta.secondary.text}</span>
             </a>
           </div>
 
           {/* Trust Indicators */}
-          <div className="hero-trust grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="hero-trust grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto px-4">
             {HERO_CONTENT.trust.map((item, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 px-4 py-3 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-lg">
-                <item.icon className="w-5 h-5 text-[#D4AF37]" />
-                <span className="text-white text-sm font-medium">{item.text}</span>
+              <div key={index} className="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-lg">
+                <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37] flex-shrink-0" />
+                <span className="text-white text-xs sm:text-sm font-medium">{item.text}</span>
               </div>
             ))}
           </div>

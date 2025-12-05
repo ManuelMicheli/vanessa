@@ -70,8 +70,8 @@ export default function Testimonials() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-20 lg:py-32 bg-[#F7F3F1] overflow-hidden">
-      <div className="container-custom">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-[#F7F3F1] overflow-hidden">
+      <div className="container-custom px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           ref={ref}
@@ -122,29 +122,29 @@ export default function Testimonials() {
                   key={`${testimonial.id}-${index}`}
                   className="flex-shrink-0 w-[90vw] sm:w-[500px] lg:w-[600px]"
                 >
-                  <div className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg border border-[#E5E7EB] h-full hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg border border-[#E5E7EB] h-full hover:shadow-xl transition-shadow">
                     {/* Stars */}
-                    <div className="flex gap-1 mb-6">
+                    <div className="flex gap-1 mb-4 sm:mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 fill-[#D4AF37] text-[#D4AF37]"
+                          className="w-4 h-4 sm:w-5 sm:h-5 fill-[#D4AF37] text-[#D4AF37]"
                         />
                       ))}
                     </div>
 
                     {/* Content */}
-                    <p className="text-lg lg:text-xl text-[#333333] leading-relaxed mb-6 italic">
+                    <p className="text-base sm:text-lg lg:text-xl text-[#333333] leading-relaxed mb-4 sm:mb-6 italic">
                       &ldquo;{testimonial.content}&rdquo;
                     </p>
 
                     {/* Author */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#001F3F] to-[#002B57] flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#001F3F] to-[#002B57] flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">
                         {testimonial.name.charAt(0)}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-[#001F3F] truncate">
+                        <div className="font-semibold text-sm sm:text-base text-[#001F3F] truncate">
                           {testimonial.name}
                         </div>
                         <div className="text-sm text-[#666666] truncate">

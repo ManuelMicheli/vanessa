@@ -90,8 +90,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#001F3F] text-white">
       {/* Main Footer */}
-      <div className="container-custom py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      <div className="container-custom py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
           {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,23 +100,23 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-1"
           >
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-lg bg-white text-[#001F3F] flex items-center justify-center font-bold text-xl">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-white text-[#001F3F] flex items-center justify-center font-bold text-lg sm:text-xl">
                 {BRAND_INFO.logoText}
               </div>
               <div>
                 <span
-                  className="text-xl font-semibold"
+                  className="text-lg sm:text-xl font-semibold"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {BRAND_INFO.brandName}
                 </span>
               </div>
             </Link>
-            <p className="text-white/70 mb-6 leading-relaxed">
+            <p className="text-white/70 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               {BRAND_INFO.description}
             </p>
-            <p className="text-[#D4AF37] font-semibold text-lg">
+            <p className="text-[#D4AF37] font-semibold text-base sm:text-lg">
               {BRAND_INFO.tagline}
             </p>
           </motion.div>
@@ -129,12 +129,12 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4
-              className="text-lg font-semibold mb-6 text-white"
+              className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Servizi
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.servizi.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -156,17 +156,17 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4
-              className="text-lg font-semibold mb-6 text-white"
+              className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Lo Studio
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.studio.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-[#D4AF37] transition-colors"
+                    className="text-sm sm:text-base text-white/70 hover:text-[#D4AF37] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -183,50 +183,50 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h4
-              className="text-lg font-semibold mb-6 text-white"
+              className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Contatti
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
                   href={`tel:${CONTACT_INFO.phone}`}
-                  className="flex items-center gap-3 text-white/70 hover:text-[#D4AF37] transition-colors"
+                  className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-white/70 hover:text-[#D4AF37] transition-colors touch-manipulation"
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span>{CONTACT_INFO.displayPhone}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${CONTACT_INFO.email}`}
-                  className="flex items-center gap-3 text-white/70 hover:text-[#D4AF37] transition-colors"
+                  className="flex items-center gap-2 sm:gap-3 text-sm sm:text-base text-white/70 hover:text-[#D4AF37] transition-colors touch-manipulation"
                 >
-                  <Mail className="w-5 h-5 flex-shrink-0" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span className="break-all">{CONTACT_INFO.email}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-white/70">
-                <Clock className="w-5 h-5 flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-white/70">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" />
                 <span>{CONTACT_INFO.hours}</span>
               </li>
-              <li className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-white/70">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" />
                 <span>{CONTACT_INFO.location}</span>
               </li>
             </ul>
 
             {/* Social Links */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white/70 hover:bg-[#D4AF37] hover:text-[#001F3F] transition-all"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-white/10 flex items-center justify-center text-white/70 hover:bg-[#D4AF37] hover:text-[#001F3F] active:bg-[#D4AF37] active:text-[#001F3F] transition-all touch-manipulation"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               ))}
             </div>
@@ -236,17 +236,17 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm text-center md:text-left">
+        <div className="container-custom py-4 sm:py-6 px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+            <p className="text-white/50 text-xs sm:text-sm text-center sm:text-left">
               © {COPYRIGHT.year} {COPYRIGHT.text}
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-white/50 text-sm hover:text-white/80 transition-colors"
+                  className="text-white/50 text-xs sm:text-sm hover:text-white/80 active:text-white/80 transition-colors touch-manipulation"
                 >
                   {link.name}
                 </Link>
@@ -261,10 +261,10 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         onClick={scrollToTop}
-        className="fixed bottom-24 right-6 w-12 h-12 bg-[#001F3F] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#001F3F] transition-colors z-40 border border-white/20"
+        className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-11 h-11 sm:w-12 sm:h-12 bg-[#001F3F] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#001F3F] active:bg-[#D4AF37] active:text-[#001F3F] transition-colors z-40 border border-white/20 touch-manipulation"
         aria-label="Torna in alto"
       >
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
       </motion.button>
     </footer>
   );

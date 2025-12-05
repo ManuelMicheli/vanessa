@@ -106,17 +106,17 @@ export default function TestimonianzePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#d97706]/10 rounded-full blur-3xl" />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white/90 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               Testimonianze
             </span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["La", "Voce", "di", "Chi", "Si", "è", "Affidato", "a", "Noi"].map((word, wordIndex) => (
@@ -201,48 +201,48 @@ export default function TestimonianzePage() {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all relative"
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all relative"
               >
                 {/* Quote Icon */}
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-[#2563eb]/10" />
+                <Quote className="absolute top-4 sm:top-6 right-4 sm:right-6 w-8 h-8 sm:w-10 sm:h-10 text-[#2563eb]/10" />
 
                 {/* Rating */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-3 sm:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-5 h-5 fill-[#d97706] text-[#d97706]"
+                      className="w-4 h-4 sm:w-5 sm:h-5 fill-[#d97706] text-[#d97706]"
                     />
                   ))}
                 </div>
 
                 {/* Content */}
-                <p className="text-[#374151] leading-relaxed mb-6 italic">
+                <p className="text-sm sm:text-base text-[#374151] leading-relaxed mb-4 sm:mb-6 italic">
                   &ldquo;{testimonial.content}&rdquo;
                 </p>
 
                 {/* Result Badge */}
-                <div className="bg-[#10b981]/10 text-[#10b981] px-4 py-2 rounded-lg inline-block text-sm font-medium mb-6">
+                <div className="bg-[#10b981]/10 text-[#10b981] px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg inline-block text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                   {testimonial.result}
                 </div>
 
                 {/* Author */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2563eb] to-[#10b981] flex items-center justify-center text-white font-bold">
+                <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#2563eb] to-[#10b981] flex items-center justify-center text-white font-bold text-sm sm:text-base flex-shrink-0">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-[#1a2332]">
+                      <div className="font-semibold text-sm sm:text-base text-[#1a2332]">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-[#374151]/70">
+                      <div className="text-xs sm:text-sm text-[#374151]/70">
                         {testimonial.location}
                       </div>
                     </div>

@@ -54,7 +54,7 @@ export default function ServiziPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
         {/* Base gradient - deep navy to almost black */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A192A] via-[#0D1F35] to-[#050A10]" />
         
@@ -115,18 +115,18 @@ export default function ServiziPage() {
         />
         
         {/* Content */}
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-block px-4 py-1.5 bg-white/[0.08] backdrop-blur-sm text-white/90 rounded-full text-sm font-medium mb-6 border border-white/[0.08]"
+              className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/[0.08] backdrop-blur-sm text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-white/[0.08]"
             >
               I Nostri Servizi
             </motion.span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["Specialisti", "in", "Risarcimenti", "Complessi"].map((word, wordIndex) => (
@@ -186,7 +186,7 @@ export default function ServiziPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/80 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed px-4"
             >
               Da oltre 20 anni aiutiamo le vittime di sinistri a ottenere il giusto
               risarcimento. Ogni caso è unico e merita la massima attenzione.
@@ -200,16 +200,16 @@ export default function ServiziPage() {
 
       {/* Benefits Bar */}
       <section className="bg-white border-b border-gray-100">
-        <div className="container-custom py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="container-custom py-6 sm:py-8 px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {benefits.map((benefit) => (
-              <div key={benefit.title} className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#f3f4f6] flex items-center justify-center">
-                  <benefit.icon className="w-6 h-6 text-[#2563eb]" />
+              <div key={benefit.title} className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#f3f4f6] flex items-center justify-center flex-shrink-0">
+                  <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#2563eb]" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1a2332]">{benefit.title}</div>
-                  <div className="text-sm text-[#374151]/70">{benefit.description}</div>
+                  <div className="font-semibold text-sm sm:text-base text-[#1a2332]">{benefit.title}</div>
+                  <div className="text-xs sm:text-sm text-[#374151]/70">{benefit.description}</div>
                 </div>
               </div>
             ))}
@@ -218,9 +218,9 @@ export default function ServiziPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 lg:py-28 bg-[var(--color-bg-alt)]">
-        <div className="container-custom">
-          <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[var(--color-bg-alt)]">
+        <div className="container-custom px-4 sm:px-6">
+          <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -229,27 +229,27 @@ export default function ServiziPage() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 <Link href={service.href} className="group block h-full">
-                  <div className="h-full bg-white rounded-2xl p-8 lg:p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--color-border)] hover:border-[var(--color-accent)]/20">
+                  <div className="h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1 border border-[var(--color-border)] hover:border-[var(--color-accent)]/20">
                     {/* Icon */}
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 bg-[var(--color-accent-light)] group-hover:bg-[var(--color-accent-medium)]">
-                      <service.icon className="w-10 h-10 text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300" />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 transition-all duration-300 group-hover:scale-110 bg-[var(--color-accent-light)] group-hover:bg-[var(--color-accent-medium)]">
+                      <service.icon className="w-8 h-8 sm:w-10 sm:h-10 text-[var(--color-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300" />
                     </div>
 
                     {/* Content */}
                     <h3
-                      className="text-2xl font-bold text-[var(--color-primary)] mb-4 group-hover:text-[var(--color-accent)] transition-colors duration-300 leading-tight"
+                      className="text-xl sm:text-2xl font-bold text-[var(--color-primary)] mb-3 sm:mb-4 group-hover:text-[var(--color-accent)] transition-colors duration-300 leading-tight"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {service.title}
                     </h3>
-                    <p className="text-[var(--color-text-muted)] mb-8 leading-relaxed text-base">
+                    <p className="text-[var(--color-text-muted)] mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                       {service.description}
                     </p>
 
                     {/* Link */}
-                    <div className="flex items-center gap-2 text-[var(--color-accent)] font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                    <div className="flex items-center gap-2 text-[var(--color-accent)] font-semibold text-xs sm:text-sm group-hover:gap-3 transition-all duration-300">
                       <span>Scopri di più</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
                 </Link>
@@ -260,30 +260,30 @@ export default function ServiziPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-[#1a2332]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#1a2332]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Non Sai da Dove Iniziare?
             </h2>
-            <p className="text-lg text-white/80 mb-10">
+            <p className="text-base sm:text-lg text-white/80 mb-8 sm:mb-10 px-4">
               Contattaci per una consulenza gratuita. Analizzeremo il tuo caso e ti
               spiegheremo le possibilità di risarcimento.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
               <Link
                 href="/contatti"
-                className="flex items-center gap-2 px-8 py-4 bg-[#10b981] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#10b981] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 active:bg-[#0d9668] text-sm sm:text-base w-full sm:w-auto touch-manipulation"
               >
                 <span>Richiedi Consulenza Gratuita</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
               <a
                 href="tel:+393459726530"
-                className="flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-[#1a2332] transition-all"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-[#1a2332] active:bg-white active:text-[#1a2332] transition-all text-sm sm:text-base w-full sm:w-auto touch-manipulation"
               >
                 <span>Chiama +39 345 972 65 30</span>
               </a>

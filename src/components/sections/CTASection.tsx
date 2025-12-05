@@ -28,7 +28,7 @@ export default function CTASection({
   return (
     <section
       ref={ref}
-      className="py-20 lg:py-28 relative overflow-hidden bg-[#001F3F]"
+      className="py-12 sm:py-16 md:py-20 lg:py-28 relative overflow-hidden bg-[#001F3F]"
     >
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden">
@@ -36,7 +36,7 @@ export default function CTASection({
         <div className="absolute -bottom-1/2 -left-1/4 w-full h-full bg-white/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -44,30 +44,30 @@ export default function CTASection({
           className="max-w-3xl mx-auto text-center"
         >
           <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             {headline}
           </h2>
-          <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 leading-relaxed px-4">
             {body}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
             <Link
               href={ctaHref}
-              className="group flex items-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#001F3F] font-semibold rounded-xl shadow-lg shadow-[#D4AF37]/20 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all hover:-translate-y-1 hover:bg-[#B8962E]"
+              className="group flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#D4AF37] text-[#001F3F] font-semibold rounded-xl shadow-lg shadow-[#D4AF37]/20 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all hover:-translate-y-1 hover:bg-[#B8962E] active:bg-[#B8962E] text-sm sm:text-base w-full sm:w-auto touch-manipulation"
             >
               <span>{ctaText}</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             {showPhone && (
               <a
                 href="tel:+393459726530"
-                className="flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white hover:text-[#001F3F] transition-all"
+                className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white hover:text-[#001F3F] active:bg-white active:text-[#001F3F] transition-all text-sm sm:text-base w-full sm:w-auto touch-manipulation"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>+39 345 972 65 30</span>
               </a>
             )}

@@ -37,8 +37,8 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="py-20 lg:py-32 bg-white overflow-hidden">
-      <div className="container-custom">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-white overflow-hidden">
+      <div className="container-custom px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
           ref={ref}
@@ -67,7 +67,7 @@ export default function HowItWorks() {
           {/* Connection Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#001F3F] via-[#666666] to-[#D4AF37] -translate-y-1/2 opacity-20" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -76,10 +76,10 @@ export default function HowItWorks() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="relative"
               >
-                <div className="bg-[#F7F3F1] rounded-2xl p-8 h-full relative group hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#E5E7EB]">
+                <div className="bg-[#F7F3F1] rounded-2xl p-6 sm:p-8 h-full relative group hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#E5E7EB]">
                   {/* Step Number */}
                   <div
-                    className="absolute -top-4 left-8 px-4 py-1 rounded-full text-white font-bold text-sm"
+                    className="absolute -top-3 sm:-top-4 left-6 sm:left-8 px-3 sm:px-4 py-1 rounded-full text-white font-bold text-xs sm:text-sm"
                     style={{ backgroundColor: step.color }}
                   >
                     {step.number}
@@ -87,20 +87,20 @@ export default function HowItWorks() {
 
                   {/* Icon */}
                   <div
-                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mt-4 transition-transform group-hover:scale-110"
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-6 mt-3 sm:mt-4 transition-transform group-hover:scale-110"
                     style={{ backgroundColor: `${step.color}10` }}
                   >
-                    <step.icon className="w-8 h-8" style={{ color: step.color }} />
+                    <step.icon className="w-7 h-7 sm:w-8 sm:h-8" style={{ color: step.color }} />
                   </div>
 
                   {/* Content */}
                   <h3
-                    className="text-xl font-bold text-[#001F3F] mb-3"
+                    className="text-lg sm:text-xl font-bold text-[#001F3F] mb-2 sm:mb-3"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {step.title}
                   </h3>
-                  <p className="text-[#666666] leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#666666] leading-relaxed">
                     {step.description}
                   </p>
                 </div>

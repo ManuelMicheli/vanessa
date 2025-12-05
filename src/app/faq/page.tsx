@@ -126,17 +126,17 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#2563eb]/10 rounded-full blur-3xl" />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white/90 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               FAQ
             </span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["Domande", "Frequenti"].map((word, wordIndex) => (
@@ -202,9 +202,9 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
+          <div className="grid lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Category Sidebar */}
             <div className="lg:col-span-1">
               <div className="bg-white rounded-xl p-4 shadow-sm sticky top-24">

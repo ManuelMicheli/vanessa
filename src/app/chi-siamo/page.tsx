@@ -77,18 +77,18 @@ export default function ChiSiamoPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#2563eb]/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-[#10b981]/10 rounded-full blur-3xl" />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white/90 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               Chi Siamo
             </span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["Esperienza,", "Empatia,", "Risultati"].map((word, wordIndex) => (
@@ -145,7 +145,7 @@ export default function ChiSiamoPage() {
                 </span>
               ))}
             </motion.h1>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed px-4">
               Da oltre 20 anni al fianco di chi ha subito un torto. La nostra missione 
               è garantirti il giusto risarcimento, senza stress e senza anticipi.
             </p>
@@ -154,9 +154,9 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* About Vanessa */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white">
+        <div className="container-custom px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
             {/* Image */}
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a2332] to-[#2563eb]">
@@ -229,8 +229,8 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-1.5 bg-[#d97706]/10 text-[#d97706] rounded-full text-sm font-medium mb-4">
               Il Nostro Percorso
@@ -270,8 +270,8 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-white">
+        <div className="container-custom px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-1.5 bg-[#10b981]/10 text-[#10b981] rounded-full text-sm font-medium mb-4">
               I Nostri Valori
@@ -284,22 +284,22 @@ export default function ChiSiamoPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="text-center p-6 rounded-2xl hover:bg-[#f3f4f6] transition-colors"
+                className="text-center p-4 sm:p-6 rounded-2xl hover:bg-[#f3f4f6] transition-colors"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-[#2563eb]/10 flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-[#2563eb]" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-xl bg-[#2563eb]/10 flex items-center justify-center">
+                  <value.icon className="w-7 h-7 sm:w-8 sm:h-8 text-[#2563eb]" />
                 </div>
                 <h3
-                  className="text-xl font-bold text-[#1a2332] mb-2"
+                  className="text-lg sm:text-xl font-bold text-[#1a2332] mb-2"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {value.title}
                 </h3>
-                <p className="text-[#374151] text-sm">{value.description}</p>
+                <p className="text-xs sm:text-sm text-[#374151]">{value.description}</p>
               </div>
             ))}
           </div>
@@ -307,8 +307,8 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block px-4 py-1.5 bg-[#2563eb]/10 text-[#2563eb] rounded-full text-sm font-medium mb-4">
               Il Nostro Network
@@ -325,17 +325,17 @@ export default function ChiSiamoPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {team.map((member) => (
               <div
                 key={member.role}
-                className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all"
+                className="bg-white rounded-2xl p-4 sm:p-6 text-center shadow-sm hover:shadow-xl transition-all"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#1a2332] to-[#2563eb] flex items-center justify-center">
-                  <member.icon className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-3 sm:mb-4 rounded-xl bg-gradient-to-br from-[#1a2332] to-[#2563eb] flex items-center justify-center">
+                  <member.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-[#1a2332] mb-1">{member.role}</h3>
-                <p className="text-sm text-[#374151]/70">{member.description}</p>
+                <h3 className="font-bold text-sm sm:text-base text-[#1a2332] mb-1">{member.role}</h3>
+                <p className="text-xs sm:text-sm text-[#374151]/70">{member.description}</p>
               </div>
             ))}
           </div>
@@ -343,8 +343,8 @@ export default function ChiSiamoPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 lg:py-28 bg-[#1a2332]">
-        <div className="container-custom">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#1a2332]">
+        <div className="container-custom px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"

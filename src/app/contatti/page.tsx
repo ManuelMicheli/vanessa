@@ -76,17 +76,17 @@ export default function ContattiPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#1a2332] via-[#1e3a5f] to-[#1a2332] relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#10b981]/10 rounded-full blur-3xl" />
         </div>
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 bg-white/10 text-white/90 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-white/10 text-white/90 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               Contatti
             </span>
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 relative"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative px-2"
               style={{ fontFamily: "var(--font-playfair)", color: "#FFFFFF" }}
             >
               {["Parliamo", "del", "Tuo", "Caso"].map((word, wordIndex) => (
@@ -152,27 +152,27 @@ export default function ContattiPage() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-6">
+      <section className="py-8 sm:py-12 bg-white border-b border-gray-100">
+        <div className="container-custom px-4 sm:px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {contactMethods.map((method) => (
               <a
                 key={method.title}
                 href={method.href}
                 target={method.title === "WhatsApp" ? "_blank" : undefined}
                 rel={method.title === "WhatsApp" ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 p-6 bg-[#f3f4f6] rounded-xl hover:bg-white hover:shadow-xl transition-all group"
+                className="flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-[#f3f4f6] rounded-xl hover:bg-white hover:shadow-xl transition-all group touch-manipulation"
               >
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 flex-shrink-0"
                   style={{ backgroundColor: `${method.color}15` }}
                 >
-                  <method.icon className="w-7 h-7" style={{ color: method.color }} />
+                  <method.icon className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: method.color }} />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-[#1a2332]">{method.title}</h3>
-                  <p className="text-sm text-[#374151]/70 mb-1">{method.description}</p>
-                  <p className="text-sm font-medium" style={{ color: method.color }}>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-semibold text-sm sm:text-base text-[#1a2332]">{method.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#374151]/70 mb-1">{method.description}</p>
+                  <p className="text-xs sm:text-sm font-medium" style={{ color: method.color }}>
                     {method.value}
                   </p>
                 </div>
@@ -183,9 +183,9 @@ export default function ContattiPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 lg:py-28 bg-[#f3f4f6]">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-[#f3f4f6]">
+        <div className="container-custom px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20">
             {/* Info Side */}
             <div>
               <span className="inline-block px-4 py-1.5 bg-[#2563eb]/10 text-[#2563eb] rounded-full text-sm font-medium mb-4">
