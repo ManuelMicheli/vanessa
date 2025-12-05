@@ -5,7 +5,6 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import CTASection from "@/components/sections/CTASection";
 import AboutPreview from "@/components/sections/AboutPreview";
-import Partners from "@/components/sections/Partners";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
         ctaHref="/contatti"
       />
       <AboutPreview />
-      <Partners />
       <FinalCTA />
     </>
   );
